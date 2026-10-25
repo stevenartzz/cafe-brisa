@@ -1,0 +1,101 @@
+/* VARIABLES: cambia estos colores y se actualiza toda la web */
+:root {
+  --color-principal: #6f4e37;   /* marrón café: botones, títulos */
+  --color-fondo: #fffaf5;       /* fondo general */
+  --color-fondo-claro: #f3e9dd; /* fondo de la sección "Nosotros" */
+  --color-texto: #2b2b2b;
+}
+
+/* Reglas generales para toda la página */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; /* tipo de letra */
+  color: var(--color-texto);
+  background: var(--color-fondo);
+  line-height: 1.6;
+}
+
+/* CABECERA: logo a la izquierda y menú a la derecha */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: var(--color-principal);
+  color: white;
+}
+.logo { margin: 0; font-size: 1.5rem; }
+.cabecera nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.cabecera nav a:hover { text-decoration: underline; }
+
+/* HÉROE: texto e imagen en dos columnas */
+.heroe {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 48px 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.heroe-texto { flex: 1; }
+.heroe-texto h2 { font-size: 2.4rem; margin-top: 0; color: var(--color-principal); }
+.heroe img { flex: 1; width: 50%; border-radius: 12px; }
+
+/* BOTÓN */
+.boton {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--color-principal);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.boton:hover { opacity: 0.85; }
+
+/* SECCIONES GENERALES */
+.seccion {
+  padding: 48px 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.seccion h2 { color: var(--color-principal); }
+.seccion-clara {
+  max-width: none;
+  background: var(--color-fondo-claro);
+  text-align: center;
+}
+
+/* TARJETAS de la carta */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.tarjeta {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.tarjeta h3 { margin-top: 0; }
+.precio { font-weight: bold; color: var(--color-principal); }
+
+/* PIE */
+.pie {
+  text-align: center;
+  padding: 24px;
+  background: var(--color-principal);
+  color: white;
+}
+
+/* MÓVIL: en pantallas pequeñas, el héroe pasa a una sola columna */
+@media (max-width: 700px) {
+  .heroe { flex-direction: column; }
+  .heroe img { width: 100%; }
+  .cabecera { flex-direction: column; gap: 8px; }
+}

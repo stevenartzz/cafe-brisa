@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Le dice al navegador que esto es una página web moderna (HTML5) -->
+<html lang="es">
+<head>
+  <!-- HEAD: información "invisible" sobre la página -->
+  <meta charset="UTF-8"> <!-- Para que se vean bien tildes y ñ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para que se vea bien en móvil -->
+  <title>Café Brisa | Cafetería de barrio</title> <!-- Texto de la pestaña del navegador -->
+  <link rel="stylesheet" href="styles.css"> <!-- Conecta el archivo de estilos (colores, tamaños...) -->
+</head>
+<body>
+
+  <!-- 1. CABECERA: logo + menú de navegación -->
+  <header class="cabecera">
+    <h1 class="logo">☕ Café Brisa</h1>
+    <nav>
+      <!-- Los href="#algo" saltan a la sección con ese id -->
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Carta</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 2. HÉROE: lo primero que ve el visitante. Titular + botón + imagen grande -->
+    <section id="inicio" class="heroe">
+      <div class="heroe-texto">
+        <h2>El mejor café de la esquina</h2>
+        <p>Café de especialidad, repostería casera y un rincón tranquilo para empezar bien el día.</p>
+        <a href="#contacto" class="boton">Reserva tu mesa</a>
+      </div>
+      <!-- Para cambiar la imagen: pon tu archivo en la carpeta del proyecto y cambia src="mi-foto.jpg" -->
+      <img src="https://picsum.photos/id/1060/800/600" alt="Taza de café sobre una mesa">
+    </section>
+
+    <!-- 3. CARTA: tres tarjetas con los productos estrella -->
+    <section id="menu" class="seccion">
+      <h2>Nuestra carta</h2>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <h3>Flat White</h3>
+          <p>Doble espresso con leche texturizada.</p>
+          <span class="precio">2,80 €</span>
+        </article>
+        <article class="tarjeta">
+          <h3>Croissant de mantequilla</h3>
+          <p>Horneado cada mañana.</p>
+          <span class="precio">2,20 €</span>
+        </article>
+        <article class="tarjeta">
+          <h3>Tarta de zanahoria</h3>
+          <p>Receta de la abuela con frosting de queso.</p>
+          <span class="precio">4,00 €</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. NOSOTROS: texto sobre el negocio -->
+    <section id="nosotros" class="seccion seccion-clara">
+      <h2>Quiénes somos</h2>
+      <p>Somos una cafetería familiar abierta desde 2015. Trabajamos con tostadores locales y productos de temporada.</p>
+    </section>
+
+    <!-- 5. CONTACTO: datos prácticos -->
+    <section id="contacto" class="seccion">
+      <h2>Visítanos</h2>
+      <p>📍 Calle Ficticia 12, Tarragona</p>
+      <p>🕗 Lunes a sábado, 8:00 – 20:00</p>
+      <p>✉️ hola@cafebrisa.example</p>
+    </section>
+
+  </main>
+
+  <!-- 6. PIE DE PÁGINA -->
+  <footer class="pie">
+    <p>© 2026 Café Brisa. Negocio ficticio para practicar.</p>
+  </footer>
+
+</body>
+</html>
